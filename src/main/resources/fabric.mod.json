@@ -1,38 +1,37 @@
 {
-  "schemaVersion": 1,
-  "id": "modid",
-  "version": "${version}",
+	"schemaVersion": 1,
+	"id": "tweakaforknomore",
+	"name": "Tweakaforknomore",
+	"version": "0.0.0",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
-  "authors": [
-    "Me!"
-  ],
-  "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
-  },
+	"description": "Adds a bunch of configurable client-side tweaks",
+	"authors": [
+		"masa",
+		"vlad2305m"
+	],
+	"contact": {
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/tweakeroo",
+		"issues": "https://github.com/maruohon/tweakeroo/issues",
+		"sources": "https://github.com/maruohon/tweakeroo",
+		"twitter": "https://twitter.com/maruohon",
+		"discord": "https://discordapp.com/channels/211786369951989762/453662800460644354/"
+	},
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+	"license": "LGPLv3",
+	"icon": "assets/tweakaforknomore/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"fi.dy.masa.tweakaforknomore.ClientTweakeroo"
+		]
+	},
 
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
-    ]
-  },
-  "mixins": [
-    "modid.mixins.json"
-  ],
+	"mixins": [
+		"mixins.tweakaforknomore.json",
+		"mixins.tweakaforknomore.tweakeroo.json"
+	],
 
-  "depends": {
-    "fabricloader": ">=0.14.11",
-    "fabric-api": "*",
-    "minecraft": "~1.19.3",
-    "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
-  }
+	"depends": {
+		"tweakeroo": "*"
+	}
 }
